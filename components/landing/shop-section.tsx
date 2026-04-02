@@ -209,7 +209,7 @@ export function ShopSection() {
                   <Card
                     className={cn(
                       neoSurface(),
-                      "flex h-full min-h-0 flex-1 flex-col overflow-visible rounded-2xl border-2 border-black bg-card ring-0"
+                      "flex h-full min-h-0 flex-1 flex-col overflow-hidden rounded-2xl border-2 border-black bg-card ring-0"
                     )}
                   >
                     <div
@@ -226,8 +226,8 @@ export function ShopSection() {
                         sizes="(max-width: 640px) 100vw, 33vw"
                       />
                     </div>
-                    <div className="flex min-h-0 flex-1 flex-col">
-                      <CardHeader className="flex-none">
+                    <div className="flex min-h-0 flex-1 flex-col overflow-hidden">
+                      <CardHeader className="shrink-0 space-y-0 pb-0">
                         <div className="flex items-start justify-between gap-2">
                           <CardTitle className="font-heading text-lg font-bold">
                             {p.name}
@@ -239,18 +239,17 @@ export function ShopSection() {
                             {p.tag}
                           </Badge>
                         </div>
-                        <CardDescription className="text-base text-muted-foreground">
+                      </CardHeader>
+                      <div className="min-h-0 flex-1 overflow-y-auto overscroll-y-contain px-4 pt-2">
+                        <CardDescription className="text-pretty text-base text-muted-foreground">
                           {p.blurb}
                         </CardDescription>
-                      </CardHeader>
-                      <div className="min-h-0 flex-1" aria-hidden />
-                      <CardContent className="flex-none pt-0">
-                        <p className="font-heading text-2xl font-bold">
-                          {p.price}
-                        </p>
+                      </div>
+                      <CardContent className="shrink-0 border-0 pt-3 pb-0">
+                        <p className="font-heading text-2xl font-bold">{p.price}</p>
                       </CardContent>
                     </div>
-                    <CardFooter className="flex-none border-t-2 border-black bg-muted/60 px-3 py-3 sm:px-4 sm:py-4">
+                    <CardFooter className="relative z-10 flex-none shrink-0 border-t-2 border-black bg-muted/60 px-3 py-3 sm:px-4 sm:py-4">
                       <Button
                         type="button"
                         variant="primary"
