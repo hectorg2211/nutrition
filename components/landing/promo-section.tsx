@@ -48,7 +48,7 @@ export function PromoSection() {
                 variant="outline"
                 className={cn(
                   neoSurfaceSm(),
-                  "mb-4 border-2 border-black bg-primary font-heading font-bold"
+                  "mb-4 border-2 border-black bg-primary font-heading font-semibold"
                 )}
               >
                 Colaboración
@@ -80,7 +80,7 @@ export function PromoSection() {
               <motion.div variants={reduce ? undefined : neoFadeUp}>
                 <h2
                   id="promo-heading"
-                  className="font-heading text-3xl font-black md:text-4xl"
+                  className="font-heading text-3xl font-bold md:text-4xl"
                 >
                   Avena Health para nutriólogos
                 </h2>

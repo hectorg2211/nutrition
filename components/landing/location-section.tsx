@@ -37,14 +37,14 @@ export function LocationSection() {
             viewport={{ once: true, amount: 0.12 }}
           >
             <motion.p
-              className="font-heading text-sm font-bold uppercase tracking-widest text-muted-foreground"
+              className="font-heading text-sm font-semibold uppercase tracking-widest text-muted-foreground"
               variants={reduce ? undefined : neoFadeUp}
             >
               Cómo llegar
             </motion.p>
             <motion.h2
               id="ubicacion-heading"
-              className="mt-2 font-heading text-3xl font-black md:text-4xl lg:text-5xl"
+              className="mt-2 font-heading text-3xl font-bold md:text-4xl lg:text-5xl"
               variants={reduce ? undefined : neoFadeUp}
             >
               Consultorio en Toriello Guerra
@@ -95,7 +95,7 @@ export function LocationSection() {
                   }}
                 >
                   <Icon className="size-5" aria-hidden />
-                  <p className="mt-2 font-heading text-sm font-bold">{title}</p>
+                  <p className="mt-2 font-heading text-sm font-semibold">{title}</p>
                   <p className="mt-1 text-xs leading-relaxed text-muted-foreground">
                     {text}
                   </p>
@@ -138,7 +138,7 @@ export function LocationSection() {
               )}
             >
               <CardHeader>
-                <CardTitle className="font-heading text-xl font-black md:text-2xl">
+                <CardTitle className="font-heading text-xl font-bold md:text-2xl">
                   Datos del consultorio
                 </CardTitle>
                 <p className="text-muted-foreground">
@@ -155,7 +155,7 @@ export function LocationSection() {
                 >
                   <MapPin className="mt-0.5 size-5 shrink-0" aria-hidden />
                   <div>
-                    <p className="font-heading font-bold">Dirección</p>
+                    <p className="font-heading font-semibold">Dirección</p>
                     <p className="text-sm text-muted-foreground">
                       Puente de Piedra 150, Toriello Guerra, Ciudad de México
                     </p>

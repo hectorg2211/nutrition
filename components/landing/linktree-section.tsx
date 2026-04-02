@@ -49,7 +49,7 @@ export function LinktreeSection() {
         >
           <h2
             id="enlaces-heading"
-            className="font-heading text-3xl font-black md:text-4xl"
+            className="font-heading text-3xl font-bold md:text-4xl"
           >
             Todo lo demás, en un solo lugar
           </h2>
@@ -90,7 +90,7 @@ export function LinktreeSection() {
                 <Icon className="size-5" aria-hidden />
               </span>
               <div>
-                <p className="font-heading font-bold">{title}</p>
+                <p className="font-heading font-semibold">{title}</p>
                 <p className="mt-1 text-sm text-muted-foreground">{text}</p>
               </div>
             </motion.li>

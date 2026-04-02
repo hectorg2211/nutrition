@@ -7,6 +7,13 @@ import { Button } from "@/components/ui/button"
 import { cn } from "@/lib/utils"
 import { useCart } from "./cart-context"
 
+/** Flat micro-buttons inside the qty pill — no neo offset shadow (avoids bleed / clutter). */
+const cartQtyButtonClass =
+  "size-8 min-h-8 min-w-8 shrink-0 rounded-full border border-black bg-white p-0 leading-none shadow-none hover:bg-black/[0.06] active:translate-y-px [&_svg]:block"
+
+const cartRemoveButtonClass =
+  "size-8 min-h-8 min-w-8 shrink-0 rounded-full border border-black bg-white p-0 leading-none text-foreground shadow-none hover:bg-red-500/10 hover:text-red-700 active:translate-y-px [&_svg]:block"
+
 function LineThumbnail({ src }: { src?: string }) {
   if (src) {
     return (
@@ -64,7 +71,7 @@ export function CartDrawer() {
           <header className="flex items-center justify-between gap-3 border-b border-black px-4 py-4 bg-primary/35">
             <div className="flex min-w-0 items-center gap-2">
               <ShoppingBag className="size-5 shrink-0" aria-hidden />
-              <Dialog.Title className="truncate font-heading text-lg font-black">
+              <Dialog.Title className="truncate font-heading text-lg font-bold">
                 Carrito
               </Dialog.Title>
             </div>
@@ -83,7 +90,7 @@ export function CartDrawer() {
           <div className="flex min-h-0 flex-1 flex-col overflow-hidden bg-card">
             {lines.length === 0 ? (
               <div className="flex flex-1 flex-col items-center justify-center gap-3 px-6 py-12 text-center">
-                <p className="font-heading text-base font-bold">
+                <p className="font-heading text-base font-semibold">
                   Tu carrito está vacío
                 </p>
                 <p className="text-sm text-muted-foreground">
@@ -106,19 +113,19 @@ export function CartDrawer() {
                     <div className="flex gap-3">
                       <LineThumbnail src={line.imageSrc} />
                       <div className="min-w-0 flex-1">
-                        <p className="font-heading text-sm font-bold leading-snug">
+                        <p className="font-heading text-sm font-semibold leading-snug">
                           {line.name}
                         </p>
-                        <p className="mt-1 font-heading text-sm font-black">
+                        <p className="mt-1 font-heading text-sm font-bold">
                           {line.priceLabel}
                         </p>
-                        <div className="mt-3 flex flex-wrap items-center gap-2">
-                          <div className="inline-flex items-center rounded-full border border-black bg-background/80 p-0.5">
+                        <div className="mt-3 flex flex-wrap items-center gap-3">
+                          <div className="inline-flex h-10 items-center gap-1 rounded-full border border-black bg-[#fffef6]/95 p-1">
                             <Button
                               type="button"
-                              variant="default"
+                              variant="noShadow"
                               size="icon"
-                              className="size-8 min-h-8 min-w-8"
+                              className={cartQtyButtonClass}
                               onClick={() =>
                                 setLineQuantity(line.id, line.quantity - 1)
                               }
@@ -126,14 +133,14 @@ export function CartDrawer() {
                             >
                               <Minus className="size-4" />
                             </Button>
-                            <span className="min-w-8 text-center font-heading text-sm font-bold tabular-nums">
+                            <span className="flex h-8 min-w-8 shrink-0 items-center justify-center px-0.5 font-heading text-sm font-semibold tabular-nums leading-none">
                               {line.quantity}
                             </span>
                             <Button
                               type="button"
-                              variant="default"
+                              variant="noShadow"
                               size="icon"
-                              className="size-8 min-h-8 min-w-8"
+                              className={cartQtyButtonClass}
                               onClick={() =>
                                 setLineQuantity(line.id, line.quantity + 1)
                               }
@@ -144,9 +151,9 @@ export function CartDrawer() {
                           </div>
                           <Button
                             type="button"
-                            variant="default"
+                            variant="noShadow"
                             size="icon"
-                            className="size-9 min-h-9 min-w-9"
+                            className={cartRemoveButtonClass}
                             onClick={() => removeLine(line.id)}
                             aria-label={`Quitar ${line.name}`}
                           >
@@ -164,7 +171,7 @@ export function CartDrawer() {
           <footer className="border-t border-black bg-muted/30 px-4 py-4">
             <div className="mb-3 flex items-center justify-between text-sm">
               <span className="text-muted-foreground">Artículos</span>
-              <span className="font-heading font-bold tabular-nums">
+              <span className="font-heading font-semibold tabular-nums">
                 {itemCount}
               </span>
             </div>

@@ -103,7 +103,7 @@ export function InstallAppFab({ className }: { className?: string }) {
             )}
           >
             <div className="mb-4 flex items-start justify-between gap-3">
-              <Dialog.Title className="font-heading text-lg font-black leading-tight">
+              <Dialog.Title className="font-heading text-lg font-bold leading-tight">
                 Añadir como app
               </Dialog.Title>
               <Dialog.Close
@@ -127,7 +127,7 @@ export function InstallAppFab({ className }: { className?: string }) {
               <ol className="space-y-4 text-sm text-foreground">
                 <li className="flex gap-3">
                   <span
-                    className="flex size-8 shrink-0 items-center justify-center rounded-lg border-2 border-black bg-primary/40 font-heading text-xs font-black"
+                    className="flex size-8 shrink-0 items-center justify-center rounded-lg border-2 border-black bg-primary/40 font-heading text-xs font-semibold"
                     aria-hidden
                   >
                     1
@@ -143,7 +143,7 @@ export function InstallAppFab({ className }: { className?: string }) {
                 </li>
                 <li className="flex gap-3">
                   <span
-                    className="flex size-8 shrink-0 items-center justify-center rounded-lg border-2 border-black bg-primary/40 font-heading text-xs font-black"
+                    className="flex size-8 shrink-0 items-center justify-center rounded-lg border-2 border-black bg-primary/40 font-heading text-xs font-semibold"
                     aria-hidden
                   >
                     2
@@ -159,7 +159,7 @@ export function InstallAppFab({ className }: { className?: string }) {
                 </li>
                 <li className="flex gap-3">
                   <span
-                    className="flex size-8 shrink-0 items-center justify-center rounded-lg border-2 border-black bg-primary/40 font-heading text-xs font-black"
+                    className="flex size-8 shrink-0 items-center justify-center rounded-lg border-2 border-black bg-primary/40 font-heading text-xs font-semibold"
                     aria-hidden
                   >
                     3
@@ -174,7 +174,7 @@ export function InstallAppFab({ className }: { className?: string }) {
               <ol className="space-y-4 text-sm text-foreground">
                 <li className="flex gap-3">
                   <span
-                    className="flex size-8 shrink-0 items-center justify-center rounded-lg border-2 border-black bg-primary/40 font-heading text-xs font-black"
+                    className="flex size-8 shrink-0 items-center justify-center rounded-lg border-2 border-black bg-primary/40 font-heading text-xs font-semibold"
                     aria-hidden
                   >
                     1
@@ -190,7 +190,7 @@ export function InstallAppFab({ className }: { className?: string }) {
                 </li>
                 <li className="flex gap-3">
                   <span
-                    className="flex size-8 shrink-0 items-center justify-center rounded-lg border-2 border-black bg-primary/40 font-heading text-xs font-black"
+                    className="flex size-8 shrink-0 items-center justify-center rounded-lg border-2 border-black bg-primary/40 font-heading text-xs font-semibold"
                     aria-hidden
                   >
                     2
@@ -202,7 +202,7 @@ export function InstallAppFab({ className }: { className?: string }) {
                 </li>
                 <li className="flex gap-3">
                   <span
-                    className="flex size-8 shrink-0 items-center justify-center rounded-lg border-2 border-black bg-primary/40 font-heading text-xs font-black"
+                    className="flex size-8 shrink-0 items-center justify-center rounded-lg border-2 border-black bg-primary/40 font-heading text-xs font-semibold"
                     aria-hidden
                   >
                     3

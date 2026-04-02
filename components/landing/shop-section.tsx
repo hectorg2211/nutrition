@@ -86,7 +86,7 @@ export function ShopSection() {
                 variant="outline"
                 className={cn(
                   neoSurfaceSm(),
-                  "mb-4 border-2 border-black bg-primary font-heading font-bold"
+                  "mb-4 border-2 border-black bg-primary font-heading font-semibold"
                 )}
               >
                 Tienda digital
@@ -94,7 +94,7 @@ export function ShopSection() {
             </motion.div>
             <motion.h2
               id="tienda-heading"
-              className="font-heading text-3xl font-black md:text-4xl lg:text-5xl"
+              className="font-heading text-3xl font-bold md:text-4xl lg:text-5xl"
               variants={reduce ? undefined : neoFadeUp}
             >
               Guías y planes para aplicar ya en casa
@@ -128,7 +128,7 @@ export function ShopSection() {
                   }}
                 >
                   <Icon className="size-5" aria-hidden />
-                  <p className="mt-2 font-heading font-bold">{title}</p>
+                  <p className="mt-2 font-heading font-semibold">{title}</p>
                   <p className="mt-1 text-sm text-muted-foreground">{text}</p>
                 </motion.div>
               ))}
@@ -154,7 +154,7 @@ export function ShopSection() {
                   {itemCount > 0 ? (
                     <Badge
                       variant="secondary"
-                      className="ml-1 min-w-7 border border-black px-1.5 font-heading tabular-nums"
+                      className="ml-1 min-w-7 border border-black px-1.5 font-heading font-semibold tabular-nums"
                     >
                       {itemCount}
                     </Badge>
@@ -173,7 +173,7 @@ export function ShopSection() {
           transition={neoSpringSnappy}
         >
           <motion.h3
-            className="mb-8 font-heading text-2xl font-black md:text-3xl"
+            className="mb-8 font-heading text-2xl font-bold md:text-3xl"
             initial={reduce ? false : { opacity: 0, x: -20 }}
             whileInView={reduce ? undefined : { opacity: 1, x: 0 }}
             viewport={{ once: true }}
@@ -229,12 +229,12 @@ export function ShopSection() {
                     <div className="flex min-h-0 flex-1 flex-col">
                       <CardHeader className="flex-none">
                         <div className="flex items-start justify-between gap-2">
-                          <CardTitle className="font-heading text-lg font-black">
+                          <CardTitle className="font-heading text-lg font-bold">
                             {p.name}
                           </CardTitle>
                           <Badge
                             variant="secondary"
-                            className="shrink-0 border border-black bg-secondary font-heading text-[0.65rem] font-bold uppercase"
+                            className="shrink-0 border border-black bg-secondary font-heading text-[0.65rem] font-semibold uppercase"
                           >
                             {p.tag}
                           </Badge>
@@ -245,7 +245,7 @@ export function ShopSection() {
                       </CardHeader>
                       <div className="min-h-0 flex-1" aria-hidden />
                       <CardContent className="flex-none pt-0">
-                        <p className="font-heading text-2xl font-black">
+                        <p className="font-heading text-2xl font-bold">
                           {p.price}
                         </p>
                       </CardContent>

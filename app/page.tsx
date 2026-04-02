@@ -23,7 +23,7 @@ export default function Home() {
         >
           <div className='mx-auto max-w-6xl'>
             <NeoReveal className='text-center'>
-              <h2 id='instagram-heading' className='mb-2 font-heading text-3xl font-black md:text-4xl'>
+              <h2 id='instagram-heading' className='mb-2 font-heading text-3xl font-bold md:text-4xl'>
                 En Instagram
               </h2>
               <p className='mb-10 text-muted-foreground'>

@@ -58,7 +58,7 @@ export function SiteFooter() {
     <footer className="border-t-2 border-black bg-[#e8e88a] px-4 py-12 md:px-8">
       <div className="mx-auto flex max-w-6xl flex-col items-center gap-8">
         <motion.p
-          className="font-heading text-xl font-black"
+          className="font-heading text-xl font-bold"
           initial={reduce ? false : { opacity: 0, y: 12 }}
           whileInView={reduce ? undefined : { opacity: 1, y: 0 }}
           viewport={{ once: true }}

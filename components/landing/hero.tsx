@@ -95,7 +95,7 @@ export function HeroSection() {
                 neoSurfaceSm(),
                 neoPress,
                 neoPressShadowSm,
-                'inline-flex items-center gap-2 rounded-full border-2 border-black bg-card px-4 py-2 font-heading text-lg font-black tracking-tight hover:bg-muted',
+                'inline-flex items-center gap-2 rounded-full border-2 border-black bg-card px-4 py-2 font-heading text-lg font-semibold tracking-tight hover:bg-muted',
               )}
             >
               <Leaf className='size-5 text-foreground' aria-hidden />
@@ -149,14 +149,14 @@ export function HeroSection() {
                 variant='outline'
                 className={cn(
                   neoSurfaceSm(),
-                  'mb-5 border-2 border-black bg-primary font-heading text-xs font-bold uppercase tracking-wider',
+                  'mb-5 border-2 border-black bg-primary font-heading text-xs font-semibold uppercase tracking-wider',
                 )}
               >
                 Nahomi · Nutrióloga pediátrica · CDMX
               </Badge>
             </motion.div>
             <motion.h1
-              className='font-heading text-4xl font-black leading-[1.05] tracking-tight text-foreground md:text-5xl lg:text-6xl'
+              className='font-heading text-4xl font-bold leading-[1.05] tracking-tight text-foreground md:text-5xl lg:text-6xl'
               variants={reduce ? undefined : neoFadeUp}
             >
               Alimentación infantil{' '}
@@ -222,7 +222,7 @@ export function HeroSection() {
             <motion.div
               className={cn(
                 neoSurfaceSm(),
-                'absolute -bottom-4 -left-2 max-w-[200px] -rotate-3 rounded-2xl border-2 border-black bg-card p-3 font-heading text-xs font-bold leading-snug shadow-[4px_4px_0_0_#000] md:-left-6 md:max-w-[220px] md:p-4 md:text-sm',
+                'absolute -bottom-4 -left-2 max-w-[200px] -rotate-3 rounded-2xl border-2 border-black bg-card p-3 font-heading text-xs font-semibold leading-snug shadow-[4px_4px_0_0_#000] md:-left-6 md:max-w-[220px] md:p-4 md:text-sm',
               )}
               initial={reduce ? false : { opacity: 0, y: 20, rotate: -8 }}
               whileInView={reduce ? undefined : { opacity: 1, y: 0, rotate: -3 }}
@@ -234,7 +234,7 @@ export function HeroSection() {
             <motion.div
               className={cn(
                 neoSurfaceSm(),
-                'absolute -right-2 top-8 hidden rounded-xl border-2 border-black bg-primary px-3 py-2 font-heading text-xs font-black uppercase shadow-[3px_3px_0_0_#000] sm:block',
+                'absolute -right-2 top-8 hidden rounded-xl border-2 border-black bg-primary px-3 py-2 font-heading text-xs font-semibold uppercase shadow-[3px_3px_0_0_#000] sm:block',
               )}
               aria-hidden
               initial={reduce ? false : { opacity: 0, scale: 0.85, x: 16 }}

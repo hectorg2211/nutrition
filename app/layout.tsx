@@ -1,18 +1,18 @@
 import type { Metadata, Viewport } from "next";
-import { Archivo, DM_Sans, Geist_Mono } from "next/font/google";
+import { Geist_Mono, Nunito, PT_Sans } from "next/font/google";
 import { Providers } from "@/components/providers";
 import "./globals.css";
 
-const archivo = Archivo({
-  variable: "--font-archivo",
+const nunito = Nunito({
+  variable: "--font-nunito",
   subsets: ["latin"],
-  weight: ["400", "700", "900"],
+  weight: ["400", "500", "600", "700", "800", "900"],
 });
 
-const dmSans = DM_Sans({
-  variable: "--font-dm-sans",
+const ptSans = PT_Sans({
+  variable: "--font-pt-sans",
   subsets: ["latin"],
-  weight: ["400", "500", "600", "700"],
+  weight: ["400", "700"],
 });
 
 const geistMono = Geist_Mono({
@@ -45,9 +45,11 @@ export default function RootLayout({
   return (
     <html
       lang="es"
-      className={`${archivo.variable} ${dmSans.variable} ${geistMono.variable} h-full antialiased`}
+      className={`${nunito.variable} ${ptSans.variable} ${geistMono.variable} h-full antialiased`}
     >
-      <body className="min-h-full flex flex-col bg-background font-sans text-foreground">
+      <body
+        className={`${ptSans.className} min-h-full flex flex-col bg-background text-foreground`}
+      >
         <Providers>{children}</Providers>
       </body>
     </html>

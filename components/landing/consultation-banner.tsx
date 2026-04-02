@@ -42,7 +42,7 @@ export function ConsultationBanner() {
                 variant="outline"
                 className={cn(
                   neoSurfaceSm(),
-                  "mb-4 border-2 border-black bg-primary font-heading font-bold"
+                  "mb-4 border-2 border-black bg-primary font-heading font-semibold"
                 )}
               >
                 Consultas
@@ -50,7 +50,7 @@ export function ConsultationBanner() {
             </motion.div>
             <motion.h2
               id="consulta-heading"
-              className="font-heading text-3xl font-black tracking-tight md:text-4xl lg:text-5xl"
+              className="font-heading text-3xl font-bold tracking-tight md:text-4xl lg:text-5xl"
               variants={reduce ? undefined : neoFadeUp}
             >
               Acompañamiento nutricional que respeta tu ritmo
@@ -113,10 +113,10 @@ export function ConsultationBanner() {
                   }}
                 >
                   <Icon className="size-5" aria-hidden />
-                  <p className="mt-2 font-heading text-xs font-bold uppercase tracking-wide text-muted-foreground">
+                  <p className="mt-2 font-heading text-xs font-semibold uppercase tracking-wide text-muted-foreground">
                     {label}
                   </p>
-                  <p className="font-heading text-lg font-black">{val}</p>
+                  <p className="font-heading text-lg font-bold">{val}</p>
                 </motion.div>
               ))}
             </div>
@@ -161,7 +161,7 @@ export function ConsultationBanner() {
             <CalendarHeart className="size-8" />
           </motion.span>
           <div className="flex-1">
-            <h3 className="font-heading text-xl font-black md:text-2xl">
+            <h3 className="font-heading text-xl font-bold md:text-2xl">
               ¿Primera vez en nutrición infantil?
             </h3>
             <p className="mt-2 text-muted-foreground">

@@ -70,7 +70,7 @@ export function InstagramCarousel() {
                   sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
                 />
               </div>
-              <figcaption className="rounded-b-[0.875rem] border-t-2 border-black bg-primary px-3 py-3 font-heading text-sm font-bold leading-snug">
+              <figcaption className="rounded-b-[0.875rem] border-t-2 border-black bg-primary px-3 py-3 font-heading text-sm font-semibold leading-snug">
                 <span className="text-primary-foreground">@nut.naho</span>
                 <span className="mt-1 block text-xs font-semibold normal-case opacity-90">
                   {post.line}

@@ -36,7 +36,7 @@ export function TipsSection() {
       <div className="mx-auto max-w-6xl">
         <motion.h2
           id="tips-heading"
-          className="mb-8 text-center font-heading text-3xl font-black md:text-4xl"
+          className="mb-8 text-center font-heading text-3xl font-bold md:text-4xl"
           initial={reduce ? false : { opacity: 0, y: 24 }}
           whileInView={reduce ? undefined : { opacity: 1, y: 0 }}
           viewport={{ once: true }}
@@ -78,7 +78,7 @@ export function TipsSection() {
                     >
                       <Icon className="size-5" aria-hidden />
                     </span>
-                    <CardTitle className="font-heading text-base font-black">
+                    <CardTitle className="font-heading text-base font-bold">
                       {title}
                     </CardTitle>
                   </CardHeader>
